@@ -1,4 +1,4 @@
-# 🏗️ Nginx website deployed on AWS infrastructure using Terraform
+# Nginx website deployed on AWS infrastructure using Terraform
 
 ## 🧩 Problem to Be Solved
 
