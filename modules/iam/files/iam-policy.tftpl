@@ -1,0 +1,95 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:DeleteAccessGrant",
+                "s3:PauseReplication",
+                "s3:PutAnalyticsConfiguration",
+                "s3:PutAccessPointConfigurationForObjectLambda",
+                "s3:DeleteAccessPoint",
+                "s3:CreateBucket",
+                "s3:CreateBucketMetadataTableConfiguration",
+                "s3:DeleteAccessPointForObjectLambda",
+                "s3:ReplicateObject",
+                "s3:DeleteBucketWebsite",
+                "s3:DissociateAccessGrantsIdentityCenter",
+                "s3:PutLifecycleConfiguration",
+                "s3:DeleteObject",
+                "s3:DeleteAccessGrantsInstanceResourcePolicy",
+                "s3:PutReplicationConfiguration",
+                "s3:PutObjectLegalHold",
+                "s3:InitiateReplication",
+                "s3:PutBucketCORS",
+                "s3:PutObject",
+                "s3:PutBucketNotification",
+                "s3:PutBucketLogging",
+                "s3:CreateAccessGrant",
+                "s3:PutBucketObjectLockConfiguration",
+                "s3:DeleteBucketMetadataTableConfiguration",
+                "s3:CreateAccessPoint",
+                "s3:PutAccelerateConfiguration",
+                "s3:CreateAccessGrantsLocation",
+                "s3:DeleteObjectVersion",
+                "s3:RestoreObject",
+                "s3:DeleteAccessGrantsLocation",
+                "s3:PutEncryptionConfiguration",
+                "s3:DeleteAccessGrantsInstance",
+                "s3:AbortMultipartUpload",
+                "s3:AssociateAccessGrantsIdentityCenter",
+                "s3:DeleteStorageLensGroup",
+                "s3:UpdateJobPriority",
+                "s3:DeleteBucket",
+                "s3:PutBucketVersioning",
+                "s3:PutIntelligentTieringConfiguration",
+                "s3:UpdateStorageLensGroup",
+                "s3:PutMetricsConfiguration",
+                "s3:UpdateJobStatus",
+                "s3:CreateAccessGrantsInstance",
+                "s3:PutInventoryConfiguration",
+                "s3:DeleteStorageLensConfiguration",
+                "s3:PutBucketWebsite",
+                "s3:PutBucketRequestPayment",
+                "s3:PutObjectRetention",
+                "s3:CreateAccessPointForObjectLambda",
+                "s3:UpdateAccessGrantsLocation",
+                "s3:PutAccessGrantsInstanceResourcePolicy",
+                "s3:ReplicateDelete"
+            ],
+            "Resource": [
+                "arn:aws:s3:*:851725346768:accesspoint/*",
+                "arn:aws:s3:*:851725346768:job/*",
+                "arn:aws:s3:*:851725346768:storage-lens/*",
+                "arn:aws:s3:*:851725346768:access-grants/default",
+                "arn:aws:s3:::epam-tf-lab-${rand}/*",
+                "arn:aws:s3:::epam-tf-lab-${rand}",
+                "arn:aws:s3-object-lambda:*:851725346768:accesspoint/*",
+                "arn:aws:s3:*:851725346768:access-grants/default/location/*",
+                "arn:aws:s3:*:851725346768:access-grants/default/grant/*",
+                "arn:aws:s3:*:851725346768:storage-lens-group/*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:SubmitMultiRegionAccessPointRoutes",
+                "s3:DeleteMultiRegionAccessPoint",
+                "s3:CreateMultiRegionAccessPoint"
+            ],
+            "Resource": "arn:aws:s3::851725346768:accesspoint/*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateStorageLensGroup",
+                "s3:PutStorageLensConfiguration",
+                "s3:CreateJob"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
