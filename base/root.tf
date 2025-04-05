@@ -1,21 +1,21 @@
 provider "aws" {
   region                   = "us-east-1"
-  shared_credentials_files = ["D:\\epam\\Terraform\\tf-epam-lab\\.aws\\credentials"]
+  shared_credentials_files = ["D:\\github\\Nginx-website-deployed-on-AWS-infrastructure-using-Terraform\\.aws\\credentials"]
 }
 
 module "network" {
-  source = "D:\\epam\\Terraform\\tf-epam-lab\\modules\\network"
+  source = "D:\\github\\Nginx-website-deployed-on-AWS-infrastructure-using-Terraform\\modules\\network"
 }
 
 module "network_security" {
-  source = "D:\\epam\\Terraform\\tf-epam-lab\\modules\\network_security"
+  source = "D:\\github\\Nginx-website-deployed-on-AWS-infrastructure-using-Terraform\\modules\\network_security"
 
   vpc_id     = module.network.vpc_id
   subnet_ids = module.network.public_subnet_ids
 }
 
 module "iam" {
-  source        = "D:\\epam\\Terraform\\tf-epam-lab\\modules\\iam"
+  source        = "D:\\github\\Nginx-website-deployed-on-AWS-infrastructure-using-Terraform\\modules\\iam"
   random_number = random_string.my_numbers.result
 }
 

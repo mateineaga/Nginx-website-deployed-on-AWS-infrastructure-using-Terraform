@@ -14,7 +14,7 @@ data "aws_region" "current" {}
 
 # Get VPC ID
 data "aws_vpc" "main" {
-  id = data.terraform_remote_state.base.outputs.vpc_id_from_base
+  id = "vpc-05c81a18f33f088ac"
 }
 
 # Get Public Subnets (Previously from outputs.tf)

@@ -10,5 +10,5 @@ terraform {
 
 provider "aws" {
   region                   = "us-east-1"
-  shared_credentials_files = ["D:\\epam\\Terraform\\tf-epam-lab\\.aws\\credentials"]
+  shared_credentials_files = ["D:\\github\\Nginx-website-deployed-on-AWS-infrastructure-using-Terraform\\.aws\\credentials"]
 }

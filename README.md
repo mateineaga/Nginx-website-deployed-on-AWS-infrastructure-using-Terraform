@@ -75,3 +75,10 @@ After deployment:
 - Each instance uploads metadata to S3 upon creation
 - Nginx displays instance ID and UUID on port 80
 - All infrastructure is managed through modular and validated Terraform code
+
+![VPC](Results/tf_ec2.png)  
+![Route tables](Results/tf_rt.png)  
+![Subnets](Results/tf_subnets.png)  
+![ASG](Results/tf_ec2.png)  
+![Load Balancer](Results/tf_lb.png)  
+![Nginx website](Results/tf_nginx.png)  

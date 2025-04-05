@@ -1,5 +1,5 @@
 module "launch_template" {
-  source = "D:\\epam\\Terraform\\tf-epam-lab\\modules\\launch_template"
+  source = "D:\\github\\Nginx-website-deployed-on-AWS-infrastructure-using-Terraform\\modules\\launch_template"
 
   random_integer                       = random_integer.subnet.result
   aws_subnets_from_compute             = data.aws_subnets.public.ids
@@ -8,14 +8,14 @@ module "launch_template" {
 }
 
 module "asg" {
-  source = "D:\\epam\\Terraform\\tf-epam-lab\\modules\\asg"
+  source = "D:\\github\\Nginx-website-deployed-on-AWS-infrastructure-using-Terraform\\modules\\asg"
 
   aws_subnets_from_compute = data.aws_subnets.public.ids
   launch_template_id       = module.launch_template.launch_template_id
 }
 
 module "elb" {
-  source = "D:\\epam\\Terraform\\tf-epam-lab\\modules\\elb"
+  source = "D:\\github\\Nginx-website-deployed-on-AWS-infrastructure-using-Terraform\\modules\\elb"
 
   aws_subnets_from_compute          = data.aws_subnets.public.ids
   security_groups_http_from_compute = data.aws_security_group.http.id
